@@ -27,7 +27,7 @@ namespace Acme.StoreManagementDemo.Data.Categories
          
          };
 
-          if(await _categoriesrepository.AnyAsync()) 
+          if(!await _categoriesrepository.AnyAsync()) 
             await _categoriesrepository.InsertManyAsync(categories);
             
         }

@@ -87,6 +87,7 @@ public class StoreManagementDemoDbContext :
         builder.ConfigureOpenIddict();
         builder.ConfigureTenantManagement();
         builder.ConfigureBlobStoring();
+        builder.Entity<Product>().HasQueryFilter(w => !w.IsDeleted);
 
         #region Store Managment Configuration
         builder.ApplyConfiguration(new ProductConfiguration());

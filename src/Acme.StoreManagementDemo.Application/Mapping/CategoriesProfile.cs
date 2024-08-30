@@ -13,8 +13,8 @@ namespace Acme.StoreManagementDemo.Mapping
     {
         public CategoriesProfile() 
         {
-        CreateMap<Category , CategoryDTO>().ReverseMap();
-        CreateMap<Category , CreateUpdateCategoryDTO>().ReverseMap();
+        CreateMap<Category,CategoryDTO>();
+        CreateMap<CreateUpdateCategoryDTO ,Category>().ReverseMap();
         }
     }
 }

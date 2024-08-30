@@ -15,8 +15,8 @@ namespace Acme.StoreManagementDemo.Mapping
     {
         public ProductProfile() 
         {
-            CreateMap<Product, ProductDTO>().ReverseMap();
-            CreateMap<Product, CreateUpdateProductDTO>().ReverseMap();
+            CreateMap<Product, ProductDTO>();
+            CreateMap<CreateUpdateProductDTO ,Product>();
         }
     }
 }
