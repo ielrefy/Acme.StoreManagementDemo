@@ -1,0 +1,17 @@
+﻿{
+  "applications": {
+    "Acme.StoreManagementDemo.HttpApi.Host": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44375",
+      "path": "../../../src/Acme.StoreManagementDemo.HttpApi.Host/Acme.StoreManagementDemo.HttpApi.Host.csproj",
+      "kubernetesService": ".*-httpapihost$"  
+    },
+    "Acme.StoreManagementDemo.Angular": {
+      "type": "cli",
+      "workingDirectory": "../../../angular",
+      "startCommand": "./start.ps1",
+      "launchUrl": "http://localhost:4200",
+      "kubernetesService": ".*-angular$"        
+    }
+  }
+}
