@@ -16,7 +16,6 @@ namespace Acme.StoreManagementDemo.Configurations
         public void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.ConfigureByConvention();
-
             builder.Property(p => p.Id).ValueGeneratedNever();
             builder.Property(p => p.Name).HasMaxLength(StoreManagementDemoConsts.MaxNameLength).IsRequired(); ;
             builder.Property(p => p.Description).HasMaxLength(StoreManagementDemoConsts.MaxDescriptionLength).IsRequired();

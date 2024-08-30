@@ -17,7 +17,7 @@ namespace Acme.StoreManagementDemo.Shared
             
         }
 
-        public AbpValidationException GetValidationException(FluentValidation.Results.ValidationResult validationResult) {
+        protected AbpValidationException GetValidationException(FluentValidation.Results.ValidationResult validationResult) {
             string message = string.Join(", ", validationResult.Errors.Select(a => a.ErrorMessage));
             var errors = validationResult.Errors
                          .Select(x => new System.ComponentModel.DataAnnotations.ValidationResult(x.ErrorMessage , [x.PropertyName])).ToList();

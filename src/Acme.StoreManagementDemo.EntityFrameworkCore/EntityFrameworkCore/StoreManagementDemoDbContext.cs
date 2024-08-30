@@ -89,7 +89,7 @@ public class StoreManagementDemoDbContext :
         builder.ConfigureBlobStoring();
         builder.Entity<Product>().HasQueryFilter(w => !w.IsDeleted);
 
-        #region Store Managment Configuration
+        #region Store Managment Configuration   
         builder.ApplyConfiguration(new ProductConfiguration());
         builder.ApplyConfiguration(new CategoryConfiguration());
         #endregion
